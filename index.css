@@ -11,18 +11,29 @@
   text-align: center;
 }
 
-.section {
-  display: flex;
+.section:after {
+  content: "";
+  display: table;
+  clear: both;
 }
 
-.nav {
-  flex: 1;
+.menu {
+  float: left;
+  width: 20%;
   padding: 32px;
   background-color: blueviolet;
 }
 
+.questions {
+  float: left;
+  width: 20%;
+  padding: 12px;
+  background-color: #223423;
+}
+
 .article {
-  flex: 3;
+  float: left;
+  width: 60%;
   padding: 32px;
   background-color: dodgerblue;
 }
@@ -35,8 +46,17 @@
   text-align: center;
 }
 
+@media (max-width: 960px) {
+  .questions {
+    width: 100%;
+  }
+  .article {
+    width: 80%;
+  }
+}
+
 @media (max-width: 600px) {
-  .section {
-    flex-direction: column;
+  .menu, .questions, .article {
+    width: 100%;
   }
 }
