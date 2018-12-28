@@ -1,0 +1,42 @@
+* {
+  box-sizing: border-box;
+  padding: 0px;
+  margin: 0px;
+}
+
+.header {
+  background-color: aquamarine;
+  padding: 48px;
+  font-size: 48px;
+  text-align: center;
+}
+
+.section {
+  display: flex;
+}
+
+.nav {
+  flex: 1;
+  padding: 32px;
+  background-color: blueviolet;
+}
+
+.article {
+  flex: 3;
+  padding: 32px;
+  background-color: dodgerblue;
+}
+
+.footer {
+  background-color: black;
+  color: white;
+  padding: 24px;
+  font-size: 24px;
+  text-align: center;
+}
+
+@media (max-width: 600px) {
+  .section {
+    flex-direction: column;
+  }
+}
